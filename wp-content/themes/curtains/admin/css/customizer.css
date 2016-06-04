@@ -1,0 +1,14 @@
+.wrap .curtains-buy-pro, .wrap .description.customize-section-description a {
+  background: #3c5895;
+  color: white;
+  padding: 2px 7px;
+  display: inline-block;
+  margin-top: 10px;
+  border-radius: 2px; }
+
+.wrap .curtains-docs {
+	display: block;
+	font-size: 16px;
+  font-weight: 700;
+  margin: 5px 0;
+}

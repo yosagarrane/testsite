@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Documentation</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="css/fonts.css" type="text/css" media="all">
+  <link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="all">
+  <script type="text/javascript" src="js/jquery-1.5.1.min.js" ></script>
+  <script type="text/javascript" src="js/jquery.prettyPhoto.js" ></script>
+  <script type="text/javascript">
+  	$(document).ready(function(){
+			// prettyphoto init
+			jQuery("a[rel^='prettyPhoto']").prettyPhoto({
+				animationSpeed:'slow',
+				theme:'facebook',
+				slideshow:false,
+				autoplay_slideshow: false,
+				show_title: true,
+				overlay_gallery: false
+			});
+		});
+  </script>
+  <!--[if lt IE 7]>
+  	<link rel="stylesheet" href="css/ie/ie6.css" type="text/css" media="screen">
+    <script type="text/javascript" src="js/ie_png.js"></script>
+    <script type="text/javascript">
+        ie_png.fix('.png');
+    </script>
+  <![endif]-->
+  <!--[if lt IE 9]>
+  	<script type="text/javascript" src="js/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <div id="main">
+  	<div class="inside">
+    	<!-- header -->
+      <header id="header">
+        <div class="inside">
+          <h1>Documentation for theme1599</h1>
+        </div>
+      </header>
+      <section id="content">
+        <article>
+          <h2>Table of Contents</h2>
+          <div class="inner">
+          	<ol class="table_content">
+              <li><a href="#getting_started">Getting started</a>
+              	<ul>
+                	<li><a href="#theme_install">Theme installation</a></li>
+                  <li><a href="#theme_act">Theme activation</a></li>
+                  <li><a href="#theme_sql">SQL dump file installation</a></li>
+                  <li><a href="#theme_links">Permalinks settings</a></li>
+                  <li><a href="#theme_menu_setup">Menu setup</a></li>
+                </ul>
+              </li>
+              <li><a href="#page_templates_sidebars">Page Templates and Sidebars</a></li>
+              <li><a href="#posts_categories">Posts and Categories</a>
+             		<ul>
+                	<li><a href="#blog_post">Add Blog post</a></li>
+                	<li><a href="#slider_post">Add Slider post (Slide)</a></li>
+                  <li><a href="#portfolio_post">Add Portfolio post</a></li>
+                  <li><a href="#friends_post">Add Friend post</a></li>
+                  <li><a href="#extra_post">Add Extra post</a></li>
+                  <li><a href="#services_post">Add Service post</a></li>
+                </ul>
+              </li>
+              <li><a href="#portfolio_page">Creating Portfolio Page</a></li>
+              <li><a href="#shortcodes">Shortcodes</a></li>
+              <li><a href="#plugins_widgets">Plugins and Custom Widgets</a></li>
+              <li><a href="#theme_options">Theme Options</a></li>
+              <li><a href="#faqs">FAQs</a></li>
+            </ol>
+          </div>
+        </article>
+        
+        
+        <!-- Getting started begin -->
+        <article>
+          <h2 id="getting_started">Getting started</h2>
+          <div class="inner">
+          	<h3 id="theme_install">Theme installation</h3>
+          	<h4>Upload via ftp:</h4>
+            <ol>
+            	<li>Unzip the  <strong>theme1599.zip</strong> file to any folder on your hard drive.</li>
+              <li>Upload the <strong>theme1599</strong> folder to the server (to the <strong>/wp-content/themes/</strong> directory).</li>
+            </ol>
+            <h4>Upload via Wordpress admin:</h4>
+            <ol style="margin-bottom:.5em;">
+            	<li>Login to your Wordpress admin panel (add /wp-admin after your domain name in the browser address bar)</li>
+              <li>Now go to  <strong>Appearance</strong></li>
+              <li>Select the <strong>Add New Themes</strong> option</li>
+              <li>Click  <strong>Add new</strong></li>
+              <li>And upload your  <strong>theme1599.zip</strong> file</li>
+            </ol>
+            <p>Installing WordPress <a href="http://codex.wordpress.org/Installing_WordPress">http://codex.wordpress.org/Installing_WordPress</a></p>
+            
+           
+            
+            <br /><br />
+            <h3 id="theme_act">Theme activation</h3>
+            <p>Once you have uploaded the theme, activate your theme in <strong>Appearance > Themes</strong>.<br />
+            <strong>Using Themes</strong> <a href="http://codex.wordpress.org/Using_Themes">http://codex.wordpress.org/Using_Themes</a></p> 
+            
+            
+            
+            
+            <br /><br /><br />
+            <h3 id="theme_sql">SQL dump file installation</h3>
+            <div class="error-box">
+            	ATTENTION: Importing the SQL file to your database will overwrite your existing content and website settings. DO NOT import the SQL file if you want to keep the existing content
+            </div>
+            <div class="notification-box">
+            	NOTE: ALWAYS backup your database before performing any modifications
+            </div>
+            
+            <p><img src="images/wp_prefix.jpg" alt=""></p>
+            <div class="notification-box">
+            	Please note that the prefix of database tables should be <strong>wp_</strong>
+            </div>
+            
+            <p>To make your WordPress look like our live demo please, follow the instructions bellow.</p>
+            <ol>
+            	<li>Install the template <a href="#theme_install">by following the directions </a></li>
+              <li>Then, copy and unzip files from the folder "plugins"  to the <strong>/wp-content/plugins/</strong> folder or use the admin panel <strong>Dashboard</strong> > <strong>Plugins</strong> > <strong>Add new</strong> > <strong>Upload</strong> and select your plugin.</li>
+              <li>Copy "<strong>uploads</strong>" folder to <strong>/wp-content</strong> folder.</li>
+            	<li>Open the <strong>theme1599.sql</strong> file that is located in the <strong>sources</strong> folder with any text editor (preferably Dreamweaver or Notepad) and replace all instances of "<strong>your_website_url_here</strong>" with your website URL in the entire document using the <strong>Find and Replace</strong> tool (usually the Ctrl+H hot key). E.g.: http://www.mywebsite.com</li> 
+              <li>Please, make sure that you do not have the forward slash "/" sign at the end of the address.</li>
+              <li>Save your changes and close the file.</li>
+              <li>Next, you can import the dump file with the <strong>phpMyAdmin</strong> tool or some other database management tool.</li>
+            </ol>
+            
+            
+            
+            
+            
+            
+            <br /><br /><br />
+            
+            
+            
+            
+            <h3 id="theme_links">Permalinks settings</h3>
+            <div class="notification-box">
+            	NOTE: Congifure the given settings right after the installation of the theme
+            </div>
+            <p>In this template the Permalinks are used, the standard paths of <strong>http://demolink.org/?p=1</strong> are replaced with <strong>http://demolink.org/home</strong>. This way of links configuration can be used by not only our blog followers but will help in SEO-optimisation as well. The effectiveness and main features of this link configuration method are revealed here - <a href="http://codex.wordpress.org/Using_Permalinks">http://codex.wordpress.org/Using_Permalinks</a></p>
+              Please follow the steps below:
+              <ol>
+                <li>Log in to your WordPress Administration Panel (Dashboard).</li>
+                <li>Click the <strong>Settings</strong></li>
+                <li>That done, click <strong>Permalinks</strong></li>
+                <li>In permalinks settings please select <strong>Custom structure</strong>, after that copy and past the following settings <strong>/%category%/%postname%/</strong></li>
+                <li>With that done, click the <strong>Save changes</strong> button.</li>
+              </ol>
+            <p><img src="images/permalinks.jpg" alt=""></p>
+            <p>If you install the theme with the dump.sql file the settings will be configured automatically. However even in this case you still need to save the current settings by clicking <strong>Save changes</strong>.</p>
+            
+            
+            <br /><br /><br />
+            
+            
+            
+            
+            
+            <h3 id="theme_menu_setup">Menu setup</h3>
+            <div class="img-box">
+            	<img src="images/menu.jpg" alt="" class="img-indent">
+            	<div class="extra-wrap">
+              	<p>WordPress 3.0 comes with a new menu management panel, which makes building your sites navigation very easy and flexible.</p>
+                <h4>This theme is registered with two menu locations:</h4>
+                <ul>
+                  <li>Header Menu - in Header</li>
+                  <li>Footer Menu - in Footer</li>
+                </ul>
+                For more info on how to setup your menu in wp 3.0, see <a href="http://codex.wordpress.org/Appearance_Menus_SubPanel">http://codex.wordpress.org/Appearance_Menus_SubPanel</a>
+              </div>
+            </div>
+            <div class="notification-box">
+            	Note! If the menu does not appear as the livedemo, go to Appereance > Menus and select the dropdown "Header Menu"
+            </div>
+            
+          </div>
+        </article>
+        <!-- Getting started end -->
+        
+        
+        <!-- Page Templates and Sidebars begin -->
+        <article>
+          <h2 id="page_templates_sidebars">Page Templates and Sidebars</h2>
+          <div class="inner">
+          	<h3>Page Templates</h3>
+            <ul>
+              <li><strong>Default Template</strong> (the default page template with a right sidebar position)</li>
+              <li><strong>Full Width</strong> (a page template with one column and no sidebar positions)</li>
+              <li><strong>Home Page</strong> (main page template)</li>
+              <li><strong>Portfolio 1 column</strong> (the page template for 1 column portfolio display)</li>
+              <li><strong>Portfolio 2 columns</strong> (the page template for 2 columns portfolio display)</li>
+              <li><strong>Portfolio 3 columns</strong> (the page template for 3 columns portfolio display)</li>
+              <li><strong>Portfolio 4 columns</strong> (the page template for 4 columns portfolio display)</li>
+            </ul>
+            
+            <br /><br />
+            <h3>Sidebar Position</h3>
+            <ul>
+              <li><strong>Header</strong> - <em>Located at the top of pages</em></li>
+              <li><strong>Before Content Area</strong> - <em>Located at the top of the Home Page content.</em></li>
+              <li><strong>Content Area 1</strong> - <em>Located at the middle of the Home Page content.</em></li>
+              <li><strong>Content Area 2</strong> - <em>Located at the middle of the Home Page content.</em></li>
+              <li><strong>Sidebar</strong> - <em>Located on the right hand side or left hand side of pages</em></li>
+              <li><strong>Footer</strong> - <em>Located at the bottom of pages.</em></li>
+            </ul>
+          </div>
+        </article>
+        <!-- Page Templates and Sidebars end -->
+        
+        
+        <!-- Posts and Categories begin -->
+        <article>
+          <h2 id="posts_categories">Posts and Categories</h2>
+          <div class="inner">
+          
+          	<h3>Adding category</h3>
+            <p>Review the following link for more info on adding categories: <a href="http://codex.wordpress.org/Manage_Categories_SubPanel">http://codex.wordpress.org/Manage_Categories_SubPanel</a></p>
+            <div class="wrapper">
+            	<img src="images/cat1.jpg" alt="" class="img-indent">
+              <ol>
+              	<li>Log in to your WordPress Administration Panel (Dashboard).</li>
+                <li>Click the  <strong>Post</strong> tab</li>
+                <li>That done, click  <strong>Categories</strong> for blog posts</li>
+                <li>Type in the name of your new category</li>
+                <li>With that done, click the <strong>Add New Category</strong> button</li>
+              </ol>
+            </div>
+
+          	
+            <br /><br />
+          	<h3 id="blog_post">Creating a blog post</h3>
+            <img src="images/cat3.jpg" alt="" class="img-indent">
+            <ol>
+            	<li>Log in to your WordPress Administration Panel (Dashboard).</li>
+              <li>Click the <strong>Posts</strong> tab</li>
+              <li>And click the  <strong>Add New</strong> tab</li>
+              <li>Type in your post content. For more info on adding posts,  please review the following link <a href="http://codex.wordpress.org/Posts_Add_New_SubPanel">http://codex.wordpress.org/Posts_Add_New_SubPanel</a></li>
+              <li>And finally click the <strong>Publish</strong> button</li>
+            </ol>
+            
+            
+            
+            <br /><br />
+            <h3 id="slider_post">Creating a slider post (slide)</h3>
+            <img src="images/slide_new.jpg" alt="" class="img-indent">
+            <p>Slides are essentially custom post types <a href="http://codex.wordpress.org/Post_Types#Custom_Types">http://codex.wordpress.org/Post_Types#Custom_Types</a>. which means that they are different from common posts, such as blog posts, portfolio posts etc. That allows us to manage the content of the site really easy. </p>
+            <p>The following slider runs on <a href="http://nivo.dev7studios.com/">Nivo Slider</a></p>
+            <div class="wrapper">
+            	<figure class="img-indent border right" style="width:30%; height:auto;">
+              	<a href="images/slider.jpg" rel="prettyPhoto[gallery]" title="Creating a slider post"><span class="magnify"></span><img src="images/slider.jpg" alt="" style="width:100%; height:auto"></a><br />
+            	  <figcaption>Creating a slider post</figcaption>
+            	</figure>
+              <ol>
+                <li>Log in to your WordPress Administration Panel (Dashboard).</li>
+                <li>Click the  <strong>Slider</strong> tab</li>
+                <li>And now click the <strong>Add New</strong> tab</li>
+                <li>Insert your slider <strong>title</strong>.</li>
+                <li>Upload your image with the help of the  <strong>Featured Image </strong>option (click the <strong>Set featured image</strong> link)</li>
+                <li>You can use the following custom fields for your slider<em></em>:
+                  <ul>
+                    <li><strong>slider-url</strong> - link for the slider image.</li>
+                  </ul>
+                </li>
+                <li>And click the <strong>Publish</strong> button</li>
+              </ol>
+            </div>
+            
+            <br /><br /><br />
+            <h3 id="portfolio_post">Adding a portfolio post</h3>
+            <div class="wrapper">
+            	<img src="images/folio_panel.jpg" alt="" class="img-indent">
+            	<p>Portfolio items are essentially custom post types <a href="http://codex.wordpress.org/Post_Types#Custom_Types">http://codex.wordpress.org/Post_Types#Custom_Types</a>. which means that they are different from common posts, such as blog posts, portfolio posts etc. That allows us to manage the content of the site really easy. </p>
+            </div>
+            <br />
+            <div class="wrapper">
+              <figure class="img-indent border right" style="width:30%; height:auto;">
+              	<a href="images/folio.jpg" rel="prettyPhoto[gallery]" title="Adding a portfolio post"><span class="magnify"></span><img src="images/folio.jpg" alt="" style="width:100%; height:auto"></a><br />
+            	  <figcaption>Adding a portfolio post</figcaption>
+            	</figure>
+              <ol>
+              	<li>Log in to your WordPress Administration Panel (Dashboard).</li>
+                <li>Click the <strong>Portfolio</strong> tab</li>
+                <li>And now the  <strong>Add New</strong> one</li>
+                <li>Fill in all the required fields (<strong>title</strong>, <strong>content</strong>)</li>
+                <li>Upload your image with the help of the <strong>Featured Image </strong>option (click the <strong>Set featured image </strong>link)</li>
+                <li>The following options are available for a porfolio post:
+                	<ul>
+                  	<li>
+                      <strong>lightbox-url</strong> - path to the large image. Once clicked it'll pop up with the help of <strong><a href="http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/">prettyPhoto</a></strong> 
+                    </li>
+                  </ul>
+                </li>
+                <li>And push the <strong>Publish</strong> button</li>
+              </ol>
+            </div>
+            
+            
+            
+            <br /><br />
+            <h3 id="services_post">Adding a Service post</h3>
+            <div class="wrapper">
+              <figure class="img-indent border right" style="width:30%; height:auto;">
+              	<a href="images/service.jpg" rel="prettyPhoto[gallery]" title="Adding a Service post"><span class="magnify"></span><img src="images/service.jpg" alt="" style="width:100%; height:auto"></a><br />
+            	  <figcaption>Adding a Service post</figcaption>
+            	</figure>
+              <ol>
+                <li>Log in to your WordPress Administration Panel (Dashboard).</li>
+                <li>Click the <strong>Services</strong> tab</li>
+                <li>And now the <strong>Add New</strong> button</li>
+                <li>Fill in all the required fields (<strong>title</strong>, <strong>content</strong>)</li>
+                <li>Upload your image with the help of the <strong>Featured Image </strong>option (click the <strong>Set featured image </strong>link)</li>
+                <li>Click <strong>Publish</strong></li>
+              </ol>
+            </div>
+            
+            
+            
+            
+            <br /><br />
+            <h3 id="extra_post">Adding a Extra posts</h3>
+            <div class="wrapper">
+              <figure class="img-indent border right" style="width:30%; height:auto;">
+              	<a href="images/extra.jpg" rel="prettyPhoto[gallery]" title="Adding a Extra post"><span class="magnify"></span><img src="images/extra.jpg" alt="" style="width:100%; height:auto"></a><br />
+            	  <figcaption>Adding a Extra post</figcaption>
+            	</figure>
+              <ol>
+                <li>Log in to your WordPress Administration Panel (Dashboard).</li>
+                <li>Click the <strong>Extra posts</strong> tab</li>
+                <li>And now the <strong>Add New</strong> button</li>
+                <li>Fill in all the required fields (<strong>title</strong>, <strong>content</strong>)</li>
+                <li>Upload your image with the help of the <strong>Featured Image </strong>option (click the <strong>Set featured image </strong>link)</li>
+                <li>Click <strong>Publish</strong></li>
+              </ol>
+            </div>
+            
+            
+            
+            
+            
+            <br /><br />
+            <h3 id="friend_post">Adding a Friend posts</h3>
+            <div class="wrapper">
+              <figure class="img-indent border right" style="width:30%; height:auto;">
+              	<a href="images/friend.jpg" rel="prettyPhoto[gallery]" title="Adding a Friend post"><span class="magnify"></span><img src="images/friend.jpg" alt="" style="width:100%; height:auto"></a><br />
+            	  <figcaption>Adding a Friend post</figcaption>
+            	</figure>
+              <ol>
+                <li>Log in to your WordPress Administration Panel (Dashboard).</li>
+                <li>Click the <strong>Friend - 1</strong> tab</li>
+                <li>And now the <strong>Add New</strong> button</li>
+                <li>Fill in all the required fields (<strong>title</strong>, <strong>content</strong>)</li>
+                <li>Upload your image with the help of the <strong>Featured Image </strong>option (click the <strong>Set featured image </strong>link)</li>
+                <li>Click <strong>Publish</strong></li>
+              </ol>
+            </div>
+            
+            
+            
+            
+          </div>
+        </article>
+        <!-- Posts and Categories end -->
+        
+        
+        
+        <!-- Portfolio page begin -->
+        <article>
+          <h2 id="portfolio_page">Creating a Portfolio page</h2>
+          <div class="inner">
+          	<div class="wrapper">
+            	<figure class="img-indent border right" style="width:30%; height:auto;">
+              	<a href="images/folio_page.jpg" rel="prettyPhoto[gallery]" title="Creating a Portfolio page"><span class="magnify"></span><img src="images/folio_page.jpg" alt="" style="width:100%; height:auto"></a><br />
+            	  <figcaption>Creating a Portfolio page</figcaption>
+            	</figure>
+            	<div class="extra-wrap">
+              	<p>Portfolio pages can be created with the help of page templates</p>
+                <ol>
+                  <li>Log in to your WordPress Administration Panel (Dashboard).</li>
+                  <li>Click the  <strong>Pages</strong> tab</li>
+                  <li>Click the <strong>Add New</strong> tab</li>
+                  <li>Type in your page name, for example <strong>Portfolio page</strong></li>
+                  <li>Select your page template ( <strong>Portfolio 1 column</strong>, <strong>Portfolio 2 columns</strong>, <strong>Portfolio 3 columns</strong> or <strong>Portfolio 4 columns</strong> in the <strong>Page Attributes</strong> drop-down menu)</li>
+                  <li>The following custom fields are available for Portfolio page template:
+                    <ul>
+                      <li><strong>page-desc</strong> - page description</li>
+                      <li><strong>category-include</strong> - name of the category that is displayed on this Portfolio page. You need to use the slug of the category here.</li>
+                    </ul>
+                  </li>
+                  <li>With that done, click the <strong>Publish</strong> button</li>
+                </ol>
+              </div>
+            </div>
+            <div class="info-box"> 
+             Note: Please do not post any content to the editor field if you use one of the pages pattern.
+            </div>
+          </div>
+        </article>
+        <!-- Portfolio page end -->
+        
+        
+        
+        <!-- Shortcodes begin -->
+        <article>
+          <h2 id="shortcodes">Shortcodes</h2>
+          <div class="inner">
+            <p>Shortcode is a powerful content building tool  <a href="http://codex.wordpress.org/Shortcode">http://codex.wordpress.org/Shortcode</a>.<br /> 
+            Shortcodes are easy to use. First please make sure that the editing mode is set to visual</p>
+            <p class="aligncenter"><img src="images/sc_visual.jpg" alt=""></p>
+            
+            <p>Then please click the button for the shortcodes.</p>
+            <p class="aligncenter"><img src="images/shortcodes.jpg" alt=""></p>
+            
+            <p>Please select the shortcode you want to insert.</p>
+            <p class="aligncenter"><img src="images/sc_menu.jpg" alt=""></p>
+            
+            
+            In this theme the following shortcodes are available:
+            
+            <dl class="shortcodes">
+              <dt>Basic</dt>
+              <dd>
+              	<ul>
+                	<li><strong>Recent Posts</strong> - for recent shortcodes with a number of settings.</li>
+                  <li><strong>Recent Testimonials</strong> - for recent testimonials</li>
+                  <li><strong>Popular Posts</strong> - for the popular posts</li>
+                  <li><strong>Recents Comments</strong> - for the recent comments</li>
+                  <li><strong>Tags</strong> - for the TagCloud</li>
+                </ul>
+              </dd>
+             	<dt>Grid columns</dt>
+              <dd>
+              	<ul>
+                	<li><strong>grid_1</strong></li>
+                  <li><strong>grid_2</strong></li>
+                  <li><strong>grid_3</strong></li>
+                  <li>... - the given shortcodes are used for the layout framework on the basis of <a href="http://960.gs/">960gs</a>.</li>
+                </ul>
+              </dd>
+              <dt>Fluid columns</dt>
+              <dd>
+              	<ul>
+                	<li><strong>1/2</strong></li>
+                  <li><strong>1/3</strong></li>
+                  <li><strong>2/3</strong></li>
+                  <li>... - the given shortcodes are used for the layout framework on the basis of fluid columns </li>
+                </ul>
+              </dd>
+              <dt>HTML</dt>
+              <dd>
+              	<ul>
+                	<li><strong>Button</strong> - the shortcode for the button</li>
+                  <li><strong>Drop Cap</strong> - to make the first letter in the paragraph an uppercase letter.</li>
+                  <li><strong>Blockquote</strong> - for a quotation</li>
+                  <li><strong>Frame</strong> - a wrapper for the image or any other object</li>
+                  <li><strong>Frame Left</strong> - a wrapper for the image or any other object with the left side location</li>
+                  <li><strong>Frame Right</strong> - a wrapper for the image or any other object with the right side location</li>
+                  <li><strong>Horizontal Rule</strong> - the horizontal separation line</li>
+                </ul>
+              </dd>
+              <dt>Alert Boxes</dt>
+              <dd>
+              	<ul>
+                	<li><strong>Alert</strong> - the Error Box</li>
+                  <li><strong>Approved</strong> - the Approve Box</li>
+                  <li><strong>Attention</strong> - the Attention box</li>
+                  <li><strong>Notice</strong> - the Notice Box</li>
+                </ul>
+              </dd>
+              <dt>Audio &amp; Video</dt>
+              <dd>
+              	<ul>
+                	<li><strong>Audio</strong> - insert audio (HTML support)</li>
+                  <li><strong>Video</strong> - insert video. <strong>Youtube</strong>, <strong>Vimeo</strong> files can be embedded as well as any file located on your server.</li>
+                </ul>
+              </dd>
+              <dt>Tabs</dt>
+              <dd>Shortcode for Tabs.</dd>
+              <dt>Toggle</dt>
+              <dd>Shortcode for toggle-script. With a number of such scripts added you can get Accordion.</dd>
+            </dl>
+            
+          </div>
+        </article>
+        <!-- Shortcodes end -->
+        
+        
+        
+        <!-- Plugins and Widgets begin -->
+        <article>
+          <h2 id="plugins_widgets">Plugins and Custom Widgets</h2>
+          <div class="inner">
+          	<h3>Plugins</h3>
+          	<p>The widgests used in the theme are listed below</p>
+            <h4>WP PageNavi</h4>
+            <p>Download: <a href="http://wordpress.org/extend/plugins/wp-pagenavi/">http://wordpress.org/extend/plugins/wp-pagenavi/</a><br />
+            Description: For page navigation.</p>
+            <h4>Contact Form 7</h4>
+            <p>Download: <a href="http://wordpress.org/extend/plugins/contact-form-7/">http://wordpress.org/extend/plugins/contact-form-7/</a><br />
+            Description: Contact form for contact page.</p>
+          
+            
+            <br /><br />
+            <h3>Widgets</h3>
+            <p>The following widgets are also used in the theme:</p>
+            
+            <div class="wrapper">
+            	<img src="images/widget_recent_comments.jpg" alt="" class="img-indent">
+              <h4>My - Recent Comments</h4>
+              <p>Displays recent comments in a more convenient format. The given widget includes the following options:</p>
+              <ul>
+              	<li><strong>Title:</strong> - Widget Title </li>
+                <li><strong>Number of comments to show:</strong> - Number of Columns.</li>
+              </ul>
+            </div>
+            
+            <br /><br />
+            
+            <div class="wrapper">
+            	<img src="images/widget_popular_posts.jpg" alt="" class="img-indent">
+              <h4>My - Popular Posts Widget</h4>
+              <p>Displays popular posts. The following options are displayed:</p>
+              <ul>
+              	<li><strong>Title:</strong> - Widget Title</li>
+                <li><strong>Posts per page:</strong> - the number of posts to display.</li>
+                <li><strong>Link Text:</strong> - the Link Text that is displayed in the Popular Posts.</li>
+                <li><strong>Link Url:</strong> - the Link URL that is displayed in the Popular Posts.</li>
+              </ul>
+            </div>
+            
+            <br /><br />
+            
+            <div class="wrapper">
+            	<img src="images/widget_post_cycle.jpg" alt="" class="img-indent">
+              <h4>My - Post Cycle</h4>
+              <p>Displays recent posts, you can also display custom posts. The Widget is used for the slideshow because of Cycle plugin in its structure. The given widget contains the following options:</p>
+              <ul>
+              	<li><strong>Title:</strong> - Widget Title</li>
+                <li><strong>Limit Text:</strong> - the number of words in the brief post description. </li>
+                <li><strong>Posts per page:</strong> - the number of posts to display.</li>
+                <li><strong>Post Type:</strong> - a Post Type selection.</li>
+              </ul>
+            </div>
+            
+            <br /><br />
+            
+            <div class="wrapper">
+            	<img src="images/widget_recent_posts.jpg" alt="" class="img-indent">
+              <h4>My - Recent Posts</h4>
+              <p>Displays recent posts. You can also show custom posts of certain categories and add a read more link. The given Wdiget contains tge following options:</p>
+              <ul>
+              	<li><strong>Title:</strong> - Widget Title</li>
+                <li><strong>Category Slug:</strong> - Post Category Slug.</li> 
+                <li><strong>Posts per page:</strong> - the number of posts to display.</li>
+                <li><strong>Link Text:</strong> - the Link Text that is displayed after the Recent Posts.</li>
+                <li><strong>Link Url:</strong> - Link URL that is displayed after the Recent posts.</li>
+              </ul>
+            </div>
+            
+            <br /><br />
+            
+            <div class="wrapper">
+            	<img src="images/widget_requestaquote.jpg" alt="" class="img-indent">
+              <h4>My - Request a Quote</h4>
+              <p>An advanced text widget with a whole lot of extra fields. The given Widget contains the following fields:</p>
+              <ul>
+              	<li><strong>Title:</strong> - Widget Title</li>
+                <li><strong>Text:</strong> - Widget Text.</li> 
+                <li><strong>Button Text:</strong> - Button Text</li>
+                <li><strong>Button URL:</strong> - Button URL</li>
+              </ul>
+            </div>
+            
+            <br /><br />
+            
+            <div class="wrapper">
+            	<figure class="img-indent" style="width:28%; height:auto;">
+              	<a href="images/widget_advanced_cycle.jpg" rel="prettyPhoto[gallery]" title="Creating a Portfolio page"><span class="magnify"></span><img src="images/widget_advanced_cycle.jpg" alt="" style="width:100%; height:auto"></a><br />
+            	</figure>
+              <div class="extra-wrap">
+              	<h4>My - Advanced Cycle</h4>
+                <p>The multifunctional widget used to display different post types including the blog posts, as well as the functionality of settings display. The given widget contains the following options:</p>
+                <ul>
+                  <li><strong>Title:</strong> - Widget Title</li>
+                  <li><strong>Posts type:</strong> - select Posts type</li> 
+                  <li><strong>Number of posts to show:</strong> - the number of posts</li>
+                  <li><strong>Sort by:</strong> - Post selection option</li>
+                  <li><strong>Reverse sort order (ascending):</strong> - reverse sort order</li>
+                  <li><strong>Show number of comments</strong> - show the number of comments</li>
+                  <li><strong>Show meta</strong> - show meta</li>
+                  <li><strong>Container class:</strong> - wrapper class. Set to <em>featured_custom_posts</em> by default</li>
+                  <li><strong>Show post title</strong> - show post title.</li>
+                  <li><strong>Date as title</strong> - for date usage instead of the title</li>
+                  <li><strong>Before title:</strong> - custom HTML-markup before Title</li>
+                  <li><strong>After title:</strong> - custom HTML-markup after Title</li>
+                  <li><strong>Show post excerpt</strong> - show excerpt</li>
+                  <li><strong>Excerpt length (words):</strong> - excerpt length (the number of words)</li>
+                  <li><strong>Excerpt as link</strong> - convert excerpt into a link</li>
+                  <li><strong>Show "More link"</strong> - show link <em>More link</em> after the post</li>
+                  <li><strong>Link text:</strong> - Link Text</li>
+                  <li><strong>Link class:</strong> - CSS-class for the link <em>More link</em></li>
+                  <li><strong>Show post thumbnail</strong> - show thumbnail for a post</li>
+                  <li><strong>Width:</strong> - Image Width</li>
+                  <li><strong>Height:</strong> - Image Height</li>
+                  <li><strong>Thumbnail as link</strong> - convert the image into a link</li>
+                  <li><strong>Show global link to all posts</strong> - Show global link to all posts</li>
+                  <li><strong>Link text:</strong> - the text of the given link</li>
+                  <li><strong>Link URL:</strong> - Link URL</li>
+                </ul>
+              </div>
+            </div>
+            
+            <br /><br />
+            
+            <div class="wrapper">
+            	<img src="images/widget_social_networks.jpg" alt="" class="img-indent">
+              <div class="extra-wrap">
+              	<h4>My - Social Networks</h4>
+                <p>This is the Widget that allows linkage to your social network accounts. The widget contains the following options:</p>
+                <ul>
+                  <li><strong>Title:</strong> - Widget Title</li>
+                  <li><strong>Facebook URL</strong>, <strong>Twitter URL</strong>, <strong>Flickr URL</strong> etc. - the links to your Social Network accounts</li> 
+                  <li><strong>Display:</strong> the way of icons display.
+                    <ul style="padding:.5em 0 0 1em;">
+                      <li><em>Icons</em> - icons only.</li>
+                      <li><em>Labels</em> - text only.</li>
+                      <li><em>Both</em> - icons and text.</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            
+            <br /><br />
+            
+            <div class="wrapper">
+            	<img src="images/widget_twitter.jpg" alt="" class="img-indent">
+              <div class="extra-wrap">
+              	<h4>My - Twitter</h4>
+                <p>This is the Widget that displays latest twitts from your twitter account. The widget contains the following options:</p>
+                <ul>
+                  <li><strong>Title:</strong> - Widget Title</li>
+                  <li><strong>Twitter Name:</strong> - your twitter name</li> 
+                  <li><strong>Twitts number:</strong> - amount of twitts to show.</li>
+                </ul>
+              </div>
+            </div>
+            
+            <br /><br />
+            
+            <div class="wrapper">
+            	<img src="images/widget_flickr.jpg" alt="" class="img-indent">
+              <div class="extra-wrap">
+              	<h4>My - Flickr</h4>
+                <p>This is the Widget that displays photos from your flickr gallery. The widget contains the following options:</p>
+                <ul>
+                  <li><strong>Title:</strong> - Widget Title</li>
+                  <li><strong>Flickr ID:</strong> - your flickr ID</li> 
+                  <li><strong>Images count:</strong> - amount of photos to show.</li>
+                  <li><strong>Link Text:</strong> - text of link under flickr photos.</li>
+                </ul>
+              </div>
+            </div>
+            
+            
+            
+          </div>
+        </article>
+        <!-- Plugins and Widgets end -->
+        
+        
+        <!-- Theme Options begin -->
+        <article>
+          <h2 id="theme_options">Theme Options</h2>
+          <div class="inner">
+          	<p>The given theme contains the Settings option. These settings allow for easy and quick change of the theme color palette, the items order, items on /off etc. In order to use these settings please go to  <strong>Appereance > Theme Options</strong>.</p>
+            <h3>General settings</h3>
+            <p><img src="images/theme_options_general.jpg" alt=""></p>
+            <ul>
+            	<li><strong>Body styling</strong> - you can select the body color and background pattern.</li>
+              <li><strong>Header background color</strong> - Header background color</li>
+              <li><strong>Buttons and links color</strong> - Buttons and links color</li>
+              <li><strong>Typography</strong> - a set of Typography settings</li>
+              <li><strong>Display search box?</strong> - show/hide the search bar in the header</li>
+              <li><strong>Custom CSS</strong> - if you need to add some css rules but you don't want to mess with the main css file, you can use this field. Just insert your new css rules</li>
+            </ul>
+            
+            
+          	
+            <h3>Logo</h3>
+            <p><img src="images/theme_options_logo.jpg" alt=""></p>
+            <ul>
+            	<li><strong>What kind of logo?</strong> - indicates what kind of logo to use, whether the text one or the image logo.</li>
+              <li><strong>Logo URL</strong> - with Image logo selected you can upload the new image with the help of the 'upload' feature or use any pic from the Media Library</li>
+            </ul>
+            
+            
+            
+            <h3>Main Navigation</h3>
+            <p><img src="images/theme_options_nav.jpg" alt=""></p>
+            <ul>
+            	<li><strong>Delay</strong> - delay in milliseconds that defines when the menu hides</li>
+              <li><strong>Fade-in animation</strong> - enabe/disable the fade-in animation</li>
+              <li><strong>Slide-down animation</strong> - enabe/disable the slide animation</li>
+              <li><strong>Speed</strong> - the speed of the submenu expanding</li>
+              <li><strong>Arrows markup</strong> - enabe/disable  arrows for the menu items that have submenus</li>
+              <li><strong><strong>Drop shadows</strong></strong> - show/hide the submenu shadow</li>
+            </ul>
+            
+            
+            
+            <h3>Slider Settings</h3>
+            <p><img src="images/theme_options_slider.jpg" alt=""></p>
+            <ul>
+              <li><strong>Slider effects</strong> - slider transition effect</li>
+              <li><strong>Number of slices</strong> - amount of slices in the slider</li>
+              <li><strong>Box columns</strong> - amount of box columns in the slider (for effects based on box animation only)</li>
+              <li><strong>Box rows</strong> - amount of box rows in the slider (for effects based on box animation only)</li>
+              <li><strong>Animation speed</strong> - the speed of the animation (ms)</li>
+              <li><strong>Pause time</strong> - delay between slides (ms)</li>
+              <li><strong>Display Next &amp; Prev	navigation</strong> - show/hide the Next &amp; Prev buttons</li>
+              <li><strong>Display Next &amp; Prev	navigation only on hover?</strong> - this options allows to specify when the Next &amp; Prev navigation is displayed</li>
+              <li><strong>Show Pagination</strong> - show or hide pagination (e.g. 1, 2, 3, 4 ...)</li>
+              <li><strong>Opacity of caption</strong> - caption opacity</li>
+            </ul>
+            
+            
+            <h3>Blog section</h3>
+            <p><img src="images/theme_options_blog.jpg" alt=""></p>
+            <ul>
+            	<li><strong>Sidebar position</strong> - you can select the position for the sidebar(right or left)</li>
+              <li><strong>Blog image size</strong> - the Image size (Normal size or Large size) for the Blog page</li>
+              <li><strong>Single post image size</strong> - the image size (Normal size or Large size) for the single post page</li>
+              <li><strong>Enable Meta for blog posts?</strong> - display meta for posts</li>
+              <li><strong>Enable excerpt for blog posts?</strong> - display excerpt for posts</li>
+            </ul>
+            
+            <h3>Footer</h3>
+            <p><img src="images/theme_options_footer.jpg" alt=""></p>
+            <ul>
+            	<li><strong>Footer copyright text</strong> - footer text content. If the text field is empty, the default content will be displayed. It is located in the <em>footer.php</em> file</li>
+              <li><strong>Google Analytics Code</strong> -you can put a code for gathering your site's SEO stats. . For instance, <em>Google Analytics Code</em></li>
+              <li><strong>Feedburner URL</strong> - <a href="www.feedburner.com/">Feedburner</a> is a Google service that takes care of your RSS feed. Paste your Feedburner URL here to let readers see it in your website</li>
+              <li><strong>Display Footer menu</strong> - enable or disable the footer menu</li>
+            </ul>
+            
+          </div>
+        </article>
+        <!-- Theme Options end -->
+        
+        
+        <!-- FAQs begin -->
+        <article>
+          <h2 id="faqs">FAQs</h2>
+          <div class="inner">
+          	<h3>How to create Contact Form in WordPress </h3>
+            <p>This video tutorial will show you how to add contact form in WordPress using the Contact Form 7 plugin</p>
+            <h4>Installing Contact Form 7 plugin</h4>
+            <ol>
+            	<li>Open WordPress admin panel</li>
+              <li><p>Go to <strong>Plugins</strong> and click <strong>Add New</strong></p>
+              	If you want to search for the plugin and download from the Internet type Contact Form 7 in the search field.<br />
+                In case the plugin is included into the template package you ordered click <strong>Upload</strong> link and Browse for the plugin file in the template <strong>sources/plugins</strong> folder.
+              </li>
+              <li>When the plugin is installed click <strong>Activate</strong>.</li>
+            </ol>
+            
+            
+            <h4>Creating Contact Form</h4>
+            <p>If the plugin has been installed correctly you should see the Contact tab in the left column. Click it</p>
+            <div class="img-indent border center" style="width:40%; height:auto;">
+              <a href="images/wp-form-1.jpg" rel="prettyPhoto[gallery]" title="Creating Contact Form"><span class="magnify"></span><img src="images/wp-form-1.jpg" alt="" style="width:100%; height:auto"></a><br />
+              <figcaption>Creating Contact Form</figcaption>
+            </div>
+            <ol>
+            	<li>To add New Contact Form click <strong>Add new</strong> button link under the Contact tab. </li>
+              <li>You can also click <strong>Add New</strong> at the top of the screen.</li>
+              <li>In this field input the HTML for tags like <code>&lt;form&gt;</code>, <code>&lt;input&gt;</code> etc</li>
+              <li>You can also use the tags drop down to add the fields you want.</li>
+            </ol>
+            
+            <div class="aligncenter">
+              <a href="http://info.template-help.com/files/wordpress/How-to-create-contact-form.swf?width=1000&amp;height=740" rel="prettyPhoto" title=""><img src="images/video.jpg" /></a>
+            </div>
+            
+            <div class="hr big"></div>
+            <h3>How to change Google Map location in WordPress</h3>
+            <p>This tutorial will show you how to change the google map location in WordPress</p>
+            <h4>Locating Google Map</h4>
+            <ol>
+            	<li>Open WordPress admin panel</li>
+              <li>Go to <strong>Appearance>Widgets</strong></li>
+              <li><p>Check the widget areas for the necessary text widget.</p>
+              	<div class="img-indent border center" style="width:40%; height:auto;">
+                  <a href="images/wp-google-map-1.jpg" rel="prettyPhoto[gallery]" title="How to change Google Map location in WordPress"><span class="magnify"></span><img src="images/wp-google-map-1.jpg" alt="" style="width:100%; height:auto"></a><br />
+                  <figcaption>How to change Google Map location in WordPress</figcaption>
+                </div>
+                The google map code looks like this:
+<pre>&lt;iframe width="318" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Brooklyn,+NY,+USA&amp;aq=0&amp;sll=37.0625,-95.677068&amp;sspn=47.704107,79.013672&amp;ie=UTF8&amp;hq=&amp;hnear=Brooklyn,+Kings,+New+York&amp;ll=40.649974,-73.949919&amp;spn=0.01628,0.028238&amp;z=14&amp;iwloc=A&amp;output=embed"&gt;&lt;/iframe&gt;</pre>.
+								This is the code you need to modify or replace. 
+              </li>
+            </ol>
+            <h4>Changing the Google Map location</h4>
+            <ol>
+            	<li>As soon as you found the google map code go to <strong>http://maps.google.com</strong></li>
+              <li>Using your mouse and the map controls choose the desired location and zoom. </li>
+              <li>Click the Link button in the top right menu.</li>
+              <li><p>Copy the code from the "<strong>Pages HTML to embed…</strong>" field.</p>
+              	<div class="img-indent border center" style="width:40%; height:auto;">
+                  <a href="images/wp-google-map-2.jpg" rel="prettyPhoto[gallery]" title="How to change Google Map location in WordPress"><span class="magnify"></span><img src="images/wp-google-map-2.jpg" alt="" style="width:100%; height:auto"></a><br />
+                  <figcaption>Changing the Google Map location</figcaption>
+                </div>
+              </li>
+              <li>Paste the code to WordPress text widget.</li>
+            </ol>
+            <p>Feel free to check the detailed video tutorial below:</p>
+            <div class="aligncenter">
+              <a href="http://info.template-help.com/files/wordpress/How-to-change-google-map.swf?width=1000&amp;height=789" rel="prettyPhoto" title=""><img src="images/video.jpg" /></a>
+            </div>
+            
+            <div class="hr big"></div>
+            <h3>How to replace text logo</h3>
+            <p>This tutorial will show you <strong>how to change text logo (website title) in WordPress.</strong></p>
+            <p>Most of the templates, that use a text logo instead of an image display the website title as a logo content. The website title could be accessed and modified through the WordPress admin panel.</p>
+            <ol>
+            	<li>Open WordPress admin panel</li>
+              <li>Go to <strong>Settings>General</strong></li>
+              <li><p>There you can see the <strong>Site Title</strong> field. Modify it’s value to change the logo.</p>
+              	<div class="img-indent border center" style="width:40%; height:auto;">
+                  <a href="images/wp-website-title-1.jpg" rel="prettyPhoto[gallery]" title="How to replace text logo"><span class="magnify"></span><img src="images/wp-website-title-1.jpg" alt="" style="width:100%; height:auto"></a><br />
+                  <figcaption>How to replace text logo </figcaption>
+                </div>
+              </li>
+            </ol>
+            <p>Feel free to check the detailed video tutorial below:</p>
+            <div class="aligncenter">
+              <a href="http://info.template-help.com/files/wordpress/How-to-change-text-logo.swf?width=1000&amp;height=789" rel="prettyPhoto" title=""><img src="images/video.jpg" /></a>
+            </div>
+
+            
+            
+            <div class="hr big"></div>
+            <h3>How to add widget area</h3>
+            <p>To add widget area access to your WordPress installation folder. </p>
+            <ol>
+            	<li>Open ‘<strong>wp-content/themes/theme####/includes</strong>’ folder. </li>
+              <li>
+              	<p>Open <strong>sidebar-init.php</strong> file. All widget areas are defined here. The following code is used to define wach area:</p>
+<pre>
+register_sidebar(array(
+  'name'          =&gt; 'Sidebar 2',
+  'id'            =&gt; 'sidebar-2',
+  'description'   =&gt; __( 'Located at the right side of pages.'),
+  'before_widget' =&gt; '&lt;div id="%1$s" class="widget %2$s"&gt;',
+  'after_widget'  =&gt; '&lt;/div&gt;',
+  'before_title'  =&gt; '&lt;h3 class="widget-title"&gt;',
+  'after_title'   =&gt; '&lt;/h3&gt;',
+));
+</pre>
+<p>To register new widget area copy the code above and paste it before the closing ‘}’ bracket</p>
+<p>Change the ‘name’, ‘id’ and ‘description’ values.</p>
+              </li>
+              <li>Now you can insert the widget area to any part of the template. Go back to the ‘<strong>wp-content/themes/theme####</strong>‘ folder. You can insert the area to any layout file:
+                <ul>
+                  <li>header.php</li>
+                  <li>footer.php</li>
+                  <li>single.php</li>
+                  <li>category.php</li>
+                  <li>index.php</li>
+                  <li>sidebar.php etc</li>
+                </ul>
+              </li>
+              <li>Paste the following code to the required place to insert the widget area.
+              	<pre>&lt;?php if ( ! dynamic_sidebar( 'New Widget Area' ) ) &lt;img src="http://info.template-help.com/wp-includes/images/smilies/icon_confused.gif" alt=":?" class="wp-smiley"&gt; &gt;&lt;!-- Wigitized Area --&gt;&lt;?php endif;?&gt;</pre>
+                <p>Replace ‘<strong>New Widget Area</strong>’ with your widget area name.</p>
+              </li>
+              <li>If everything has been done correctly the new widget area would be available from the WordPress admin panel <strong>Appearance>Widgets</strong> (right column).</li>
+            </ol>
+            <p>Feel free to check the detailed video tutorial below:</p>
+            <div class="aligncenter">
+              <a href="http://info.template-help.com/files/wordpress/wp-add-widget-area.swf?width=1000&amp;height=789" rel="prettyPhoto" title=""><img src="images/video.jpg" /></a>
+            </div>
+            
+            
+            <div class="hr big"></div>
+            <h3>How to create page templates</h3>
+            <p>Individual Pages can be set to use a specific custom <strong>Page Template</strong> (a PHP template file, e.g., custom.php) you create within your Theme. This new Page Template will override the default <strong>page.php</strong> page template.</p>
+            <p>WordPress can be configured to use <strong>different Page Templates for different Pages</strong>. At the page editing screen you can specify the page template in the Page Attributes block.</p>
+            <div class="img-indent border center" style="width:40%; height:auto;">
+              <a href="images/wp-page-template-1.jpg" rel="prettyPhoto[gallery]" title="How to create page templates"><span class="magnify"></span><img src="images/wp-page-template-1.jpg" alt="" style="width:100%; height:auto"></a><br />
+              <figcaption>How to create page templates</figcaption>
+            </div>
+            <p>In order to access the Page Template selector, there must be at least one custom Page Template available in the active theme. If a custom page exists, but you still are not able to see Page Template selector, try to re-activate your current theme. </p>
+            <h4>Creating Your Own Page Templates</h4>
+            <p>The files defining each Page Template could be found in <strong>wp-content/themes</strong> directory. To create a new Custom Page Template for a Page you must create new <strong>.php</strong> file. For example let’s name it <strong>custom.php</strong></p>
+            <p>To make it work as a page template the file should start from</p>
+<pre>
+&lt;?php
+/*
+Template Name: Custom
+*/
+?&gt;
+</pre>
+<p>The file may be named almost anything with a .php extension(see reserved Theme filenames for filenames you should not use; these are special file names WordPress reserves for specific purposes).
+The rest of the page template files can contain anything you need, starting from the static content to some markup that will determine your page content</p>
+<p>Feel free to check the detailed video tutorial below:</p>
+<div class="aligncenter">
+  <a href="http://info.template-help.com/files/wordpress/how-to-create-page-template.swf?width=1000&amp;height=789" rel="prettyPhoto" title=""><img src="images/video.jpg" /></a>
+</div>
+            
+            
+            <div class="hr big"></div>
+            <h3>How to install WordPress plugin (through admin panel) </h3>
+            <ol>
+            	<li>Open WordPress admin panel and go to <strong>Plugins</strong> tab</li>
+              <li>Click <strong>Add New</strong> button at the top.</li>
+              <li>From the top menu select <strong>Upload</strong>.</li>
+              <li>Click <strong>Browse</strong> and select the plugin package. Usually the plugins provided with the WordPress theme could be found in the <strong>sources/plugins</strong> folder. When you found the plugin package click <strong>Open</strong>, then <strong>Upload</strong>.</li>
+              <li>When the upload procedure is done you need to activate the plugin. Use the <strong>Activate Plugin</strong> link.</li>
+            </ol>
+            <div class="aligncenter">
+              <a href="http://info.template-help.com/files/wordpress/how-to-install-plugin.swf?width=1000&amp;height=789" rel="prettyPhoto" title=""><img src="images/video.jpg" /></a>
+            </div>
+            
+            
+            <div class="hr big"></div>
+            <h3>How to use WordPress Media Library</h3>
+            <p>This tutorial will show you <strong>how to use the WordPress media library</strong>.</p>
+            <p>The media library is used to enrich your website content with images, videos audio etc.</p>
+            <p>The <strong>Library</strong> could be accessed through the WordPress admin panel. Open the <strong>Media</strong> tab and click <strong>Library</strong> link. Here you may see all your media items.</p>
+            <div class="img-indent border center" style="width:40%; height:auto;">
+              <a href="images/wp-media-lib-1.jpg" rel="prettyPhoto[gallery]" title="How to create page templates"><span class="magnify"></span><img src="images/wp-media-lib-1.jpg" alt="" style="width:100%; height:auto"></a><br />
+              <figcaption>How to use WordPress Media Library</figcaption>
+            </div>
+            <p>Clicking the <strong>Edit</strong> button under each item you can modify the item settings (input the image alternative title, check the dimentions etc.)</p>
+            <div class="img-indent border center" style="width:40%; height:auto;">
+              <a href="images/wp-media-lib-2.jpg" rel="prettyPhoto[gallery]" title="How to create page templates"><span class="magnify"></span><img src="images/wp-media-lib-2.jpg" alt="" style="width:100%; height:auto"></a><br />
+              <figcaption>How to use WordPress Media Library</figcaption>
+            </div>
+            <p>To Add New item to the library click the <strong>Add New</strong> button. Then select the files on your computer and click <strong>Upload</strong>.</p>
+            <div class="aligncenter">
+              <a href="http://info.template-help.com/files/wordpress/wp-media-library.swf?width=1000&amp;height=789" rel="prettyPhoto" title=""><img src="images/video.jpg" /></a>
+            </div>
+          </div>
+        </article>
+        <!-- FAQs end -->
+        
+        
+        
+      </section>
+      <!-- footer -->
+      <footer id="footer">
+        <div class="inside">
+          theme1599
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
